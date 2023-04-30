@@ -20,6 +20,8 @@ import MainLogo from "./../assets/invites/main-logo.svg";
 import { BrandGradient, InviteFontColor } from "../theme/Colors";
 import { useNavigate } from "react-router-dom";
 
+import data from "../common/Data.json";
+
 interface EventType {
   name: string;
   location: {
@@ -29,37 +31,6 @@ interface EventType {
   time: string;
   id: string;
 }
-
-const EVENTS: EventType[] = [
-  {
-    id: "1",
-    name: "Hindu Wedding",
-    location: {
-      name: "Southwood Community League",
-      address: "1860 37 ST NW, Edmonton, AB T6L 2R2",
-    },
-    time: "31 Aug 2023 | 7PM",
-  },
-  {
-    id: "2",
-    name: "Sikh Wedding",
-    location: {
-      name: "Gurudwara Siri Guru Singh Sabha",
-      address: "4504 Mill Woods Rd S, Edmonton, AB T6L 6Y8",
-    },
-    time: "01 Sep 2023 | 7PM",
-  },
-
-  {
-    id: "3",
-    name: "Reception Party",
-    location: {
-      name: "Bhartiya Cultural Society Of Alberta",
-      address: "9507 39 Ave, Edmonton, AB T6E 5T3",
-    },
-    time: "02 Sep 2023 | 7PM",
-  },
-];
 
 export const Invite: FC = () => {
   const params = new URLSearchParams(window.location.search);
@@ -203,9 +174,11 @@ export const Invite: FC = () => {
           flexDir={{ base: "column", lg: "row" }}
           gap={{ base: 4, md: 8, lg: 0 }}
         >
-          {EVENTS.filter((ev) => ids.includes(ev.id)).map((event, idx) => (
-            <Event {...event} key={event.id} idx={idx} />
-          ))}
+          {data.events
+            .filter((ev) => ids.includes(ev.id))
+            .map((event, idx) => (
+              <Event {...event} key={event.id} idx={idx} />
+            ))}
         </Flex>
       </Container>
 
@@ -231,6 +204,7 @@ export const Invite: FC = () => {
             color: "brand.800",
             borderColor: `${InviteFontColor}CC`,
           }}
+          onClick={() => window.open(data.rsvpLink, "_blank")}
         >
           Click here to RSVP
         </Button>

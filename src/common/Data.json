@@ -1,0 +1,33 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "name": "Hindu Wedding",
+      "location": {
+        "name": "Southwood Community League",
+        "address": "1860 37 ST NW, Edmonton, AB T6L 2R2"
+      },
+      "time": "31 Aug 2023 | 7PM"
+    },
+    {
+      "id": "2",
+      "name": "Sikh Wedding",
+      "location": {
+        "name": "Gurudwara Siri Guru Singh Sabha",
+        "address": "4504 Mill Woods Rd S, Edmonton, AB T6L 6Y8"
+      },
+      "time": "01 Sep 2023 | 7PM"
+    },
+
+    {
+      "id": "3",
+      "name": "Reception Party",
+      "location": {
+        "name": "Bhartiya Cultural Society Of Alberta",
+        "address": "9507 39 Ave, Edmonton, AB T6E 5T3"
+      },
+      "time": "02 Sep 2023 | 7PM"
+    }
+  ],
+  "rsvpLink": ""
+}
