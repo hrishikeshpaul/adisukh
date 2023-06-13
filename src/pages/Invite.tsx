@@ -184,7 +184,7 @@ export const Invite: FC = () => {
 
       <Box className="rsvp" textAlign="center" zIndex="2">
         <Text fontWeight="600" fontSize={{ base: "xs", md: "md" }}>
-          No gifts please
+          No gifts please. We don't have the space! Consider donating to our bank account instead?
         </Text>
 
         <Button
@@ -206,7 +206,7 @@ export const Invite: FC = () => {
           }}
           onClick={() => window.open(data.rsvpLink, "_blank")}
         >
-          Click here to RSVP
+          RSVP here by July 10th
         </Button>
       </Box>
     </Center>
