@@ -184,7 +184,7 @@ export const Invite: FC = () => {
 
       <Box className="rsvp" textAlign="center" zIndex="2">
         <Text fontWeight="600" fontSize={{ base: "xs", md: "md" }}>
-          No gifts please. We don't have the space! Consider donating to our bank account instead?
+          No physical gifts please. Your blessings and love is all we seek!
         </Text>
 
         <Button
