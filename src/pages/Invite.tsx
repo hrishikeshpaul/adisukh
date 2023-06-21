@@ -206,7 +206,7 @@ export const Invite: FC = () => {
           }}
           onClick={() => window.open(data.rsvpLink, "_blank")}
         >
-          RSVP here by July 10th
+          RSVP here by August 10th
         </Button>
       </Box>
     </Center>
